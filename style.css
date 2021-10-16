@@ -1,0 +1,316 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.container {
+	padding-left: 200px;
+	padding-right: 200px;
+}
+.home {
+	padding-top: 20px;
+	background-image: url("images/watch.jpg");
+	background-repeat: no-repeat;
+	background-size: 600px;
+	background-position: right -270px bottom -50px;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 45px;
+}
+
+/* nav */
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-brand {
+	display: inline-block;
+}
+.nav-logo {
+	width: 35px;
+}
+.nav-right {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.nav-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.nav-item {
+	margin-right: 25px;
+}
+.nav-link {
+	text-decoration: none;
+	color: #333;
+}
+.nav-form {
+	margin-left: 5px;
+}
+.nav-input {
+	border: none;
+	border-bottom: 1px solid silver;
+	outline: none;
+}
+.nav-input:focus {
+	border-bottom-color: lawngreen;
+	border-bottom-width: 2px;
+}
+
+/* home-content */
+.home-content {
+	padding: 200px 0 220px;
+}
+.home-article {
+	width: 45%;
+}
+.article-title {
+	font-size: 35px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.article-text {
+	padding-left: 15px;
+	border-left: 2px solid #777;
+	margin-bottom: 20px;
+}
+.article-link {
+	text-decoration: none;
+	display: inline-block;
+	padding: 7px 15px;
+	background-color: red;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	font-family: sans-serif;
+}
+.article-link:hover {
+	background-color: green;
+}
+
+/* boxes */
+.boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 65px;
+}
+.box {
+	width: 32%;
+}
+.dots {
+	display: flex;
+}
+.dot {
+	width: 5px;
+	height: 5px;
+	background-color: silver;
+	margin-right: 7px;
+}
+.line-text {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: tomato;
+}
+.line {
+	width: 30px;
+	height: 2px;
+	background-color: tomato;
+	margin-right: 5px;
+	transition: .2s width linear;
+}
+.line-text:hover .line {
+	width: 40px;
+}
+
+/* band */
+.band {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 45px;
+}
+.band-article {
+	width: 50%;
+}
+.band-img {
+	width: 40%;
+}
+
+/* footer */
+.footer {
+	background-image: url("images/runners.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+.footer-content {
+	padding: 240px 0;
+}
+.footer-article {
+	width: 47%;
+	margin-left: auto;
+}
+
+/* responsiveness */
+@media(max-width: 1200px){
+	.container {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+}
+@media(max-width: 1100px){
+	.home {
+		background-size: 500px;
+		background-position: right -200px bottom -30px;
+	}
+	.home-article {
+		width: 50%;
+	}
+}
+@media(max-width: 1000px){
+	.band-img {
+		width: 45%;
+	}
+	.footer-article {
+		width: 70%;
+	}
+}
+@media(max-width: 900px){
+	.container {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+}
+@media(max-width: 850px){
+	.box {
+		width: 47%;
+		margin-bottom: 20px;
+		text-align: justify;
+	}
+}
+@media(max-width: 800px){
+	.home-content {
+		padding: 150px 0 180px;
+	}
+	.home {
+		background-size: 400px;
+		background-position: right -150px bottom -20px;
+	}
+	.home-article {
+		width: 60%;
+	}
+	.band {
+		justify-content: center;
+	}
+	.band-article {
+		width: 100%;
+	}
+	.band-img {
+		width: 60%;
+		order: -1;
+		margin-bottom: 30px;
+	}
+	.footer-content {
+		padding: 150px 0;
+	}
+	.footer-article {
+		width: 100%;
+	}
+}
+@media(max-width: 650px){
+	.home-content {
+		padding: 100px 0;
+	}
+	.home {
+		background: none;
+	}
+	.home-article {
+		width: 100%;
+	}
+	.band-img {
+		width: 80%;
+	}
+}
+@media(max-width: 625px){
+	.container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+@media(max-width: 550px){
+	.nav {
+		justify-content: center;
+	}
+	.nav-right {
+		width: 100%;
+		justify-content: center;
+	}
+	.nav-brand {
+		margin-bottom: 20px;
+	}
+	.boxes {
+		justify-content: center;
+	}
+	.box {
+		width: 90%;
+		margin-bottom: 20px;
+	}
+}
+@media(max-width: 480px){
+	.nav-menu, .nav-form {
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+	.nav-menu {
+		justify-content: space-evenly;
+		margin-bottom: 20px;
+	}
+	.nav-item {
+		margin-right: 0;
+	}
+	.nav-form {
+		margin-left: 0;
+	}
+	.band-img {
+		width: 90%;
+	}
+	.article {
+		text-align: center;
+	}
+	.article-text {
+		border-left: none;
+		padding-left: 0;
+	}
+	.footer-content {
+	    padding: 120px 0;
+	}
+}
+@media(max-width: 400px){
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.box {
+		width: 100%;
+	}
+}
+@media(max-width: 325px){
+	.nav-menu {
+		justify-content: space-around;
+	}
+}
